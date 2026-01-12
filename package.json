@@ -1,0 +1,42 @@
+{
+  "name": "anormal-project-n1-server",
+  "version": "1.0.0",
+  "description": "Backend for full working CRM service web site",
+  "keywords": [
+    "CRM",
+    "Backend",
+    "Express",
+    "Node",
+    "TypeScript",
+    "PostgreSQL",
+    "CRUD",
+    "RESTfullAPI"
+  ],
+  "homepage": "https://github.com/kreedxe/anormal-project-n1-server#readme",
+  "bugs": {
+    "url": "https://github.com/kreedxe/anormal-project-n1-server/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kreedxe/anormal-project-n1-server.git"
+  },
+  "license": "MIT",
+  "author": "Otabek Umataliev",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "nodemon --watch src --exec ts-node src/index.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6"
+  }
+}
