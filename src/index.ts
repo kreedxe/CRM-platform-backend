@@ -3,6 +3,7 @@ import express, { Application, Request, Response } from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import path from "path";
+import errorHandler from "./middlewares/errorHandler.middleware";
 
 
 // load environment variables
@@ -13,7 +14,7 @@ const app: Application = express();
 const port = process.env.PORT || 9000;
 
 
-//setup public directory
+// setup public directory
 app.use(express.static(path.join(__dirname, 'public')));
 
 
@@ -25,9 +26,13 @@ app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ extended: true }));
 
 
-//setup cors
+// setup cors
 app.use(cors());
 
+// route setup
+
+// error-handling middleware
+app.use(errorHandler);
 
 // start server
 app.listen(port, () => {
