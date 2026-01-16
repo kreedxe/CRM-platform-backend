@@ -4,6 +4,8 @@ import dotenv from "dotenv";
 import cors from "cors";
 import path from "path";
 import errorHandler from "./middlewares/errorHandler.middleware";
+import clientidMiddleware from "./middlewares/clientid.middleware";
+import asyncHandler from "./middlewares/asyncHandler.middleware";
 
 
 // load environment variables
@@ -29,7 +31,12 @@ app.use(express.urlencoded({ extended: true }));
 // setup cors
 app.use(cors());
 
+
+app.use(asyncHandler(clientidMiddleware.verify));
+
+
 // route setup
+
 
 // error-handling middleware
 app.use(errorHandler);
