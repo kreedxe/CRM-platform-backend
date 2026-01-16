@@ -1,1 +1,1 @@
-# anormal-project-n1-server
+# CRM-platform-backend

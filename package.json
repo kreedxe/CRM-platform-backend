@@ -1,7 +1,7 @@
 {
-  "name": "anormal-project-n1-server",
+  "name": "crm-platform-backend",
   "version": "1.0.0",
-  "description": "Backend for full working CRM service web site",
+  "description": "Backend for full working CRM service website",
   "keywords": [
     "CRM",
     "Backend",
@@ -12,13 +12,13 @@
     "CRUD",
     "RESTfullAPI"
   ],
-  "homepage": "https://github.com/kreedxe/anormal-project-n1-server#readme",
+  "homepage": "https://github.com/kreedxe/CRM-project-backend#readme",
   "bugs": {
-    "url": "https://github.com/kreedxe/anormal-project-n1-server/issues"
+    "url": "https://github.com/kreedxe/CRM-project-backend/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kreedxe/anormal-project-n1-server.git"
+    "url": "git+https://github.com/kreedxe/CRM-project-backend.git"
   },
   "license": "MIT",
   "author": "Otabek Umataliev",
