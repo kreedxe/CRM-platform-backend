@@ -14,7 +14,6 @@ export default function errorHandler(err: any, req: Request, res: Response, next
         };
 
         res.status(500).json(response);
-        return;
     
     } else {
 
@@ -31,6 +30,5 @@ export default function errorHandler(err: any, req: Request, res: Response, next
         };
 
         res.status(customError.status).json(jsonResponse);
-        return;
     }
 }

@@ -9,5 +9,7 @@ export default class CustomError extends Error {
         this.message = message;
         this.status = status;
         this.additionalInfo = additionalInfo;
+
+        Object.setPrototypeOf(this, new.target.prototype);
     }
 }

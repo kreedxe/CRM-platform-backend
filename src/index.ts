@@ -1,11 +1,12 @@
 
-import express, { Application, Request, Response } from "express";
+import express, { Application } from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import path from "path";
 import errorHandler from "./middlewares/errorHandler.middleware";
 import clientidMiddleware from "./middlewares/clientid.middleware";
 import asyncHandler from "./middlewares/asyncHandler.middleware";
+import notFound from "./middlewares/notFound.middleware";
 import routes from "./routes/index.route";
 
 
@@ -39,6 +40,10 @@ app.use(asyncHandler(clientidMiddleware.verify));
 
 // route setup
 app.use("/api", routes);
+
+
+// handle 404 not found error
+app.use(notFound);
 
 
 // error-handling middleware
