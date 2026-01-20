@@ -6,6 +6,7 @@ import path from "path";
 import errorHandler from "./middlewares/errorHandler.middleware";
 import clientidMiddleware from "./middlewares/clientid.middleware";
 import asyncHandler from "./middlewares/asyncHandler.middleware";
+import routes from "./routes/index.route";
 
 
 // load environment variables
@@ -32,14 +33,17 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 
+// client ID verification
 app.use(asyncHandler(clientidMiddleware.verify));
 
 
 // route setup
+app.use("/api", routes);
 
 
 // error-handling middleware
 app.use(errorHandler);
+
 
 // start server
 app.listen(port, () => {

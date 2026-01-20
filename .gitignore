@@ -130,6 +130,4 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-src/prisma/generated/
-http_requests/
-/src/generated/prisma
+src/generated
