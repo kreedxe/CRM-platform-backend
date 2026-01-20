@@ -41,12 +41,14 @@
     "inversify": "^7.11.0",
     "jsonwebtoken": "^9.0.3",
     "nodemon": "^3.1.11",
-    "pg": "^8.17.1"
+    "pg": "^8.17.1",
+    "yup": "^1.7.1"
   },
   "devDependencies": {
     "@types/bcrypt": "^6.0.0",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^25.0.9",
     "@types/pg": "^8.16.0",
     "prisma": "^7.2.0",

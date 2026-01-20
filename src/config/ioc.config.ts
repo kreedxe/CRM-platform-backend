@@ -2,6 +2,7 @@ import { Container } from "inversify";
 import { TYPES } from "./ioc.types";
 
 import { HealthController } from "../controllers/health.controller";
+import { AccountController } from "../controllers/account.controller";
 
 import IUnitOfService from "../services/interfaces/iunitof.service";
 import { IUserService } from "../services/interfaces/iuser.service";
@@ -17,6 +18,7 @@ import IUnitOfWork from "../repositories/interfaces/iunitofwork.repository";
 const container = new Container();
 
 container.bind<HealthController>(TYPES.HealthController).to(HealthController);
+container.bind<AccountController>(TYPES.AccountController).to(AccountController);
 
 container.bind<IUnitOfService>(TYPES.IUnitOfService).to(UnitOfService);
 container.bind<IUserService>(TYPES.IUserService).to(UserService);
