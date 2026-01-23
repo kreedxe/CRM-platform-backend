@@ -30,3 +30,48 @@ This repository contains the backend implementation for the **CRM Platform**. It
 - **JWT**: Secure authentication and authorization.
 
 ---
+
+## API Endpoints
+
+### Authentication
+
+- `POST /api/auth/login`: User login.
+- `POST /api/auth/register`: User registration.
+- `POST /api/auth/refresh-token`: Refresh JWT token.
+- `POST /api/auth/logout`: User logout.
+
+### Users
+
+- `GET /api/users/me`: Get current logged in user
+- `GET /api/users/getbyemail`: Get user by Email.
+- `GET /api/users/:id`: Get user by ID.
+- `PUT /api/users/:id`: Update user by ID.
+- `DELETE /api/users/:id`: Delete user by ID.
+
+### Health Check
+
+- `GET /api/health/check`: Check server health.
+
+---
+
+## Environment Variables
+
+| Variable       | Description                    | Example                     |
+| -------------- | ------------------------------ | --------------------------- |
+| `PORT`         | Server port                    | `9000`                      |
+| `NODE_ENV`     | Environment (development/test) | `development`               |
+| `DATABASE_URL` | PostgreSQL connection string   | `postgres://user:pass@host` |
+| `JWT_SECRET`   | Secret key for JWT             | `your_jwt_secret`           |
+| `JWT_AUDIENCE` | JWT audience                   | `your_audience`             |
+| `JWT_ISSUER`   | JWT issuer                     | `your_issuer`               |
+
+---
+
+## Scripts
+
+- `npm run dev`: Start the development server.
+- `npm run start`: Start the production server.
+- `npm run prisma:migrate`: Run prisma migrations.
+- `npm run prisma:generate`: Generate Prisma client.
+
+---
